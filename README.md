@@ -11,3 +11,25 @@ Näillä riveillä määritin että domainnimi menee kyseiselle Digital Ocean pa
 ![kuva](https://user-images.githubusercontent.com/105205141/218450701-c59f04f2-090f-4dbc-a598-cfbf355d097f.png)
 
 ## b)
+
+Aloitin tutkimiseni seuraavalla komennolla: 
+
+    host seikku.me
+   
+![kuva](https://user-images.githubusercontent.com/105205141/218451720-8dbb7a0f-b005-4d36-8eda-a4feb7656df7.png)
+
+Host -komennolla sain listaan kaikki ne IP-osoitteet jotka NameCheap oli luonut oletukselta sekä oman DigitalOcean palvelimeni osoitteen (maalattuna). 
+
+Tämän jälkeen latasin dnsutils-paketin voidakseni käyttää dig-komentoa. 
+
+    sudo apt-get install dnsutils
+    dig 142.93.103.158 seikku.me
+    
+![kuva](https://user-images.githubusercontent.com/105205141/218452369-f1c959fa-5f8c-4c68-8951-f8d45d24cc1d.png)
+![kuva](https://user-images.githubusercontent.com/105205141/218452439-e581016a-b97b-4a5c-95e3-b1c2991d416b.png)
+
+Dig-komennosta voidaan tulkita palvelimen osoite sekä responsetime DNS-osoitteessa, sekä IP-osoitteessa. 
+
+Jostain syystä minulla Query time molemmissa näytti olevan 0msec.
+
+
